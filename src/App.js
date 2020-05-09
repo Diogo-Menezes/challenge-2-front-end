@@ -38,7 +38,7 @@ function App() {
     try {
       const response = await api.delete(`repositories/${id}`);
       if (response.status === 204) {
-        // loadRepositories();
+        
         setRepositories(repositories.filter((repo) => repo.id !== id));
       }
     } catch (error) {
@@ -60,7 +60,7 @@ function App() {
         ))}
       </ul>
 
-      <button onClick={handleAddRepository}>Add</button>
+      <button onClick={handleAddRepository}>Adicionar</button>
     </div>
   );
 }
